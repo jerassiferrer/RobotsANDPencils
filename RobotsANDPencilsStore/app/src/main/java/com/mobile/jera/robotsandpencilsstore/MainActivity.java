@@ -10,8 +10,7 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
     private EditText commentInput;
     private Button addButton;
-    CommentsLoader loader = new CommentsLoader();
-
+    private MainContract.Presenter presenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             commentInput.setError("Comment is invalid");
         }else{
             Comment comment = new Comment(commentString);
-            loader.save(comment);
+            presenter.saveComment(comment);
         }
     }
 
