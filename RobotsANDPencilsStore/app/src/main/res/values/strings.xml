@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RobotsANDPencilsStore</string>
+    <string name="hint">Please write your comment here.</string>
+    <string name="add_comment">add comment.</string>
+</resources>
